@@ -7,8 +7,13 @@
   </head>
   <body>
   	<img src="http://railsgirls.com/images/rg-warsaw.png" />
-   <%=render "form"%>
-<p><%= link_to("Back to this entry", entry_path(@entry)) %></p>
+      <%= form_for(Entry.new) do |form| %>
+      <p><%= form.label("title") %></p>
+      <p><%= form.text_field("title") %></p>
+      <p><%= form.label("contents") %></p>
+      <p><%= form.text_area("contents") %></p>
+      <p><%= form.submit %></p>
+<% end %>
 <p><%= link_to("Back to all entries", entries_path) %></p>
   </body>
 </html>
