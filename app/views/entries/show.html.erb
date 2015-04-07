@@ -31,6 +31,7 @@
    <% for comment in @entry.comments %>
     <h3><%= comment.nick %></h3>
   <p><%= comment.contents %></p>
+  <p><%= link_to("Delete this comment", comments_path(@comment)) %></p>
   <%end%>
   </div>
   
