@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Little Webapp: Coding Is Magic</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-Girls-Warsaw-App/master/style.css" />
+  </head>
+  <body>
+  	<img src="http://railsgirls.com/images/rg-warsaw.png" />
+  	<div>
+  <h1>My favourite websites</h1>
+  <h2><%= @website.title %></h2>
+  <p><%= @website.url %></p>
+  <p><%= link_to image_tag(@entry.image.url(:large)), @entry.image.url %></p>
+  <p><%= link_to("Back to all websites", websites_path) %></p>
+  <p><%= link_to("Edit this website", edit_website_path(@website)) %></p>
+  <p><%= link_to("Delete this website", entry_path(@website)) %></p>
+
+  </div>
+  <div>
+  </div>
+
+  </body>
+</html>
