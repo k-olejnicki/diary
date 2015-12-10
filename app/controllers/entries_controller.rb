@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params["id"])
   end
   def update
-    entry_params = params["entry"].permit("title","date" , "image", "youtube_url" , "youtube_embed" ,"contents")
+    entry_params = params["entry"].permit("title", "date" , "image", "youtube_url" , "youtube_embed" ,"contents")
     entry = Entry.find(params["id"])
     entry.update_attributes(entry_params)
     redirect_to(entry_path(entry))

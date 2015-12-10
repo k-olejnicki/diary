@@ -19,7 +19,7 @@
   <% if entry.youtube_url %>
   <%= youtube_embed entry.youtube_url %>
   <%end%>
-  <p><%= link_to image_tag(entry.image.url(:large)), entry.image.url %></p>
+  <p><%= link_to image_tag(entry.image(:large)), entry.image.url %></p>
   <p><%= entry.contents %></p>
   <p><%= link_to "Delete", entry_path(entry), method: :delete %></p>
 
